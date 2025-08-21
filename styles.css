@@ -1,0 +1,142 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+header h1 {
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: #fff;
+}
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+section h2 {
+  margin-top: 0;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.card h3 {
+  margin-top: 0;
+}
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #005fa3;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+label {
+  font-weight: bold;
+}
+input, textarea, select, button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #0077cc;
+}
+input:required:invalid, textarea:required:invalid {
+  border-color: red;
+}
+input:valid, textarea:valid {
+  border-color: green;
+}
+button {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
