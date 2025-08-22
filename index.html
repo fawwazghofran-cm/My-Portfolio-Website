@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghofran Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Ghofran Fawwaz Al-Khalafat</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main">
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile.jpg" alt="Profile picture of Ghofran Fawwaz Al-Khalafat" width="200" height="200">
+      <p>
+        Hello! I am Ghofran Fawwaz Al-Khalafat, a Smart Systems graduate ranked first in my batch. 
+        I specialize in Python, C, and C++ with experience in software development and system design. 
+        I hold a Bachelor's degree in Intelligent Systems Engineering from Tafila Technical University, 
+        graduating with a GPA of 89.65%.
+      </p>
+      <p>
+        Connect with me on 
+        <a href="https://www.linkedin.com/in/ghofran-al-khalafat-97213637b" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+
+      <!-- CV Download Button -->
+      <a href="Ghofran_Fawwaz_Al-Khalafat_CV.pdf" download class="btn cv-btn">Download CV</a>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- مشروع 1 -->
+        <article class="card">
+          <h3>Weather App</h3>
+          <img src="E:\portfolio\imagesweather-app.jpeg" alt="Screenshot of Weather App" width="300" height="200">
+          <p>A web application that shows real-time weather data using API integration.</p>
+          <a href="https://github.com/fawwazghofran-cm/Weather-App" target="_blank" class="btn">View Project</a>
+        </article>
+
+        <!-- مشروع 2 -->
+        <article class="card">
+          <h3>Portfolio Website</h3>
+          <img src="E:\portfolio\imagesportfolio.jpeg" alt="Screenshot of Portfolio Website" width="300" height="200">
+          <p>My personal portfolio built with HTML, CSS, and JavaScript to showcase my work.</p>
+          <a href="https://github.com/fawwazghofran-cm/My-Portfolio-Website" target="_blank" class="btn">View Project</a>
+        </article>
+
+        <!-- مشروع 3 -->
+        <article class="card">
+          <h3>Data Analysis Tool</h3>
+          <img src="E:\portfolio\imagesdata-tool.jpeg" alt="Screenshot of Data Analysis Tool" width="300" height="200">
+          <p>A Python-based tool for analyzing datasets and generating visual reports.</p>
+          <a href="https://github.com/fawwazghofran-cm/Data-Analysis-Tool" target="_blank" class="btn">View Project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required placeholder="name@example.com">
+
+        <!-- Website -->
+        <label for="website">Website</label>
+        <input id="website" type="url" name="website" placeholder="https://example.com">
+
+        <!-- Phone -->
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" pattern="^\+?\d{9,15}$" placeholder="+9627XXXXXXXX" required>
+
+        <!-- Date & Time -->
+        <label for="meet">Meeting Time</label>
+        <input id="meet" type="datetime-local" name="meet" required>
+
+        <!-- Select -->
+        <label for="role">Reason for Contact</label>
+        <select id="role" name="role" required>
+          <option value="">--Select--</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="job">Job Offer</option>
+          <option value="question">Question</option>
+        </select>
+
+        <!-- Radio (fieldset + legend) -->
+        <fieldset>
+          <legend>Priority</legend>
+          <label><input type="radio" name="priority" value="low" required> Low</label>
+          <label><input type="radio" name="priority" value="normal"> Normal</label>
+          <label><input type="radio" name="priority" value="high"> High</label>
+        </fieldset>
+
+        <!-- Datalist -->
+        <label for="topic">Topic</label>
+        <input id="topic" name="topic" list="topics" placeholder="Choose or type">
+        <datalist id="topics">
+          <option value="Frontend">
+          <option value="Backend">
+          <option value="AI/ML">
+        </datalist>
+
+        <!-- Range + Output -->
+        <label for="budget">Budget (USD)</label>
+        <input id="budget" name="budget" type="range" min="0" max="5000" step="100"
+               oninput="budgetOut.value = this.value">
+        <output id="budgetOut">0</output>
+
+        <!-- Message -->
+        <label for="brief">Message</label>
+        <textarea id="brief" name="brief" required minlength="10" placeholder="Write your message here..."></textarea>
+
+        <!-- File -->
+        <label for="attach">Attach a file</label>
+        <input id="attach" name="attach" type="file" accept=".pdf,.doc,.docx,.png,.jpg">
+
+        <!-- Submit -->
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Ghofran Fawwaz Al-Khalafat. All rights reserved.</p>
+  </footer>
+</body>
+</html>

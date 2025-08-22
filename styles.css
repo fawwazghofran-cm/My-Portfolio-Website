@@ -1,0 +1,169 @@
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 0 1rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #ddd;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* ===== Sections ===== */
+section {
+  margin: 2rem 0;
+}
+
+#about img {
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+/* ===== Projects Grid ===== */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #005fa3;
+}
+
+/* زر تحميل CV */
+.cv-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #28a745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.cv-btn:hover {
+  background: #218838;
+}
+
+/* ===== Contact Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #0077cc;
+}
+
+input:invalid, textarea:invalid {
+  border-color: red;
+}
+
+input:valid, textarea:valid {
+  border-color: green;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 2px solid #ddd;
+  margin-top: 2rem;
+}
